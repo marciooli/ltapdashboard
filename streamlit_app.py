@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-import plost
+#import plost
 
 st.set_page_config(layout='centered', initial_sidebar_state='collapsed')
     
@@ -29,7 +29,7 @@ col3.metric("Humidity", "86%", "4%")
 seattle_weather = pd.read_csv('https://raw.githubusercontent.com/tvst/plost/master/data/seattle-weather.csv', parse_dates=['date'])
 stocks = pd.read_csv('https://raw.githubusercontent.com/dataprofessor/data/master/stocks_toy.csv')
 
-c1, c2 = st.columns((7,3))
+c1, c2, c3 = st.columns()
 with c1:
     st.markdown('### Heatmap')
     plost.time_hist(
